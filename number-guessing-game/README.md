@@ -2,4 +2,4 @@
 
 A simple number guessing game where the computer is randomly selects a number and user has to guess it.
 
-[Project page on roadmap.sh](https://roadmap.sh/projects/number-guessing-game)
+<https://roadmap.sh/projects/number-guessing-game>
