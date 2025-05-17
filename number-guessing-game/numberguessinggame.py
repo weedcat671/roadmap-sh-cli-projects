@@ -1,3 +1,4 @@
+import timeit
 from random import randint # randint function is used to generate random integer
 
 print("""
@@ -31,6 +32,7 @@ print("Let's start the game!")
 number_to_guess = randint(1, 100)
 chances = chosen_difficulty[1]
 
+start = timeit.default_timer()
 while True:
 	try: # user input validation loop
 		guess = int(input("\nEnter your guess: "))
@@ -40,7 +42,9 @@ while True:
 	chances -= 1
 
 	if number_to_guess == guess:
-		exit(f"Congratulations! You guessed the correct number in {chosen_difficulty[1] - chances} attempts.\n")
+		stop = timeit.default_timer()
+		exit(f"Congratulations! You guessed the correct number in {chosen_difficulty[1] - chances} attempts and {int(stop - start)} seconds.\n")
+
 	elif number_to_guess > guess:
 		print(f"Incorrect! The number is greater than {guess}")
 	else:
